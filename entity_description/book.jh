@@ -1,0 +1,6 @@
+entity Book{
+  title String required,
+  description String required minlength(5) maxlength(50),
+  publicationDate LocalDate,
+  price BigDecimal
+}
