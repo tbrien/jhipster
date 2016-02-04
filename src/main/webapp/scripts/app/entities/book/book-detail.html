@@ -42,6 +42,14 @@
                     <span class="form-control-static">{{book.price}}</span>
                 </td>
             </tr>
+            <tr>
+                <td>
+                    <span>writer</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="author.detail({id:book.writer.id})">{{book.writer.id}}</a>
+                </td>
+            </tr>
             </tbody>
         </table>
     </div>

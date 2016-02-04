@@ -1,10 +1,11 @@
 'use strict';
 
 angular.module('jhipsterdemoApp').controller('BookDialogController',
-    ['$scope', '$stateParams', '$modalInstance', 'entity', 'Book',
-        function($scope, $stateParams, $modalInstance, entity, Book) {
+    ['$scope', '$stateParams', '$modalInstance', 'entity', 'Book', 'Author',
+        function($scope, $stateParams, $modalInstance, entity, Book, Author) {
 
         $scope.book = entity;
+        $scope.authors = Author.query();
         $scope.load = function(id) {
             Book.get({id : id}, function(result) {
                 $scope.book = result;
