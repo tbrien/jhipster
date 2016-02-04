@@ -4,3 +4,12 @@ entity Book{
   publicationDate LocalDate,
   price BigDecimal
 }
+
+entity Author{
+  name String required,
+  birthDate LocalDate
+}
+
+relationship OneToMany{
+  Author{book} to Book{writer}
+}

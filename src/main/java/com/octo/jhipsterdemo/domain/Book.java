@@ -13,6 +13,8 @@ import javax.persistence.*;
 import javax.validation.constraints.*;
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.Objects;
 
 /**
@@ -45,6 +47,9 @@ public class Book implements Serializable {
     
     @Column(name = "price", precision=10, scale=2, nullable = false)
     private BigDecimal price;
+
+    @ManyToOne
+    private Author writer;
 
     public Long getId() {
         return id;
@@ -84,6 +89,14 @@ public class Book implements Serializable {
 
     public void setPrice(BigDecimal price) {
         this.price = price;
+    }
+
+    public Author getWriter() {
+        return writer;
+    }
+
+    public void setWriter(Author author) {
+        this.writer = author;
     }
 
     @Override

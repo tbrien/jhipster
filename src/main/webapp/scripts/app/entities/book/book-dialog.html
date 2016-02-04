@@ -58,6 +58,12 @@
                     >
         </div>
 
+        <div class="form-group">
+            <label for="field_writer">writer</label>
+            <select class="form-control" id="field_writer" name="writer" ng-model="book.writer" ng-options="author as author.id for author in authors track by author.id">
+                <option value=""></option>
+            </select>
+        </div>
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">

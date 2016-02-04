@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('jhipsterdemoApp')
-    .controller('BookDetailController', function ($scope, $rootScope, $stateParams, entity, Book) {
+    .controller('BookDetailController', function ($scope, $rootScope, $stateParams, entity, Book, Author) {
         $scope.book = entity;
         $scope.load = function (id) {
             Book.get({id: id}, function(result) {
